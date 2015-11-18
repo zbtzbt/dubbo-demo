@@ -1,0 +1,11 @@
+# see DatasourceProperties
+spring:
+  application.name: dubbo-consumer
+#web port
+server.port : 8088
+#dubbo
+dubbo:
+    registry.url : zookeeper://115.159.5.17:2181
+    port : -1
+    user.version : TEST
+

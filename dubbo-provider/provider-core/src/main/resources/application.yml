@@ -1,0 +1,10 @@
+spring:
+  application.name: dubbo-provider
+
+server.port : 8080
+
+dubbo:
+    registry.url : zookeeper://115.159.5.17:2181
+    port : -1
+    server : user
+    export.version : TEST
