@@ -21,8 +21,8 @@
   2.cd 到 dubbo-demo/dubbo-provider目录下，执行：mvn clean install，在 target目录下生成dubbo-provider.zip，zip包为provider server服务包。  
   3.解压dubbo-provider.zip包，执行：unzip -d dubbo-provider dubbo-provider.zip  
   4.cd 到解压的dubbo-provider目录，执行：sh server.sh start,启动服务，启动成功会有类似'Starting ......PID=25617 Server start OK in 11 seconds.OK!'输出。  
-  5.cd 到 dubbo-demo/dubbo-consumer目录下，执行：mvn clean install，在 target目录下生成dubbo-consumer.zip，zip包为consumer server服务包。 
-  6.解压dubbo-consumer.zip包，执行：unzip -d dubbo-consumer dubbo-consumer.zip  
+  5.cd 到 dubbo-demo/dubbo-consumer目录下，执行：mvn clean install，在 target目录下生成dubbo-consumer.zip，zip包为consumer server服务包。  
+  6.解压dubbo-consumer.zip包，执行：unzip -d dubbo-consumer dubbo-consumer.zip   
   7.cd 到解压的dubbo-consumer目录，执行：sh server.sh start,启动服务。  
 ## 环境说明
 ### 日常(Daily)环境（供QA集成测试使用）
