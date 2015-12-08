@@ -19,6 +19,6 @@ public class DubboServer {
     public static void main(String[] args) {
         SpringApplication.run(DubboServer.class, args);
         System.out.println(new SimpleDateFormat("[yyyy-MM-dd HH:mm:ss]").format(new Date())
-                + " dubbo consumer server started!");
+                + " dubbo consumer service server started!");
     }
 }

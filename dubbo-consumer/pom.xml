@@ -17,9 +17,73 @@
         <!-- dubbo -->
         <dubbo.version>2.5.3</dubbo.version>
         <zkclient.version>0.1</zkclient.version>
-
+        <!-- java and maven plugin -->
+        <java.version>1.7</java.version>
+        <java.encode>UTF-8</java.encode>
+        <maven.compiler.version>3.1</maven.compiler.version>
+        <maven.resources.version>2.4.3</maven.resources.version>
+        <maven-assembly-plugin.version>2.4</maven-assembly-plugin.version>
 
     </properties>
+
+    <build>
+        <finalName>dubbo-consumer</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${maven-assembly-plugin.version}</version>
+                <configuration>
+                    <finalName>dubbo-consumer</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>${basedir}/src/assembly/release.xml</descriptor>
+                    </descriptors>
+                    <outputDirectory>${project.parent.build.directory}</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>assemble</id>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <phase>install</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${java.encode}</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>${maven.resources.version}</version>
+                <configuration>
+                    <encoding>${java.encode}</encoding>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 
         <dependencies>
 
