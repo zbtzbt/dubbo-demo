@@ -1,5 +1,5 @@
 # dubbo-demo
-  Dubbo是阿里巴巴开源的的SOA服务化治理方案的核心框架，本项目为dubbo服务集成spring boot的简单demo。
+  Dubbo是阿里巴巴开源的的SOA服务化治理方案的核心框架，本项目为dubbo服务集成spring boot的简单demo。  
   dubbo的github地址：https://github.com/alibaba/dubbo
 # 配置指南
   开发环境：  
